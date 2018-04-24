@@ -1,0 +1,7 @@
+<h2>register</h2>
+<%= form_for @user do |f| %>
+  username: <%= f.text_field :username %>
+  password: <%= f.password_field :password %>
+  <%= f.submit "register" %>
+<% end %>
+<%= link_to "login?", login_path, {:style=>"position:absolute; top:0; right:0;"} %>
