@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_action :require_user
   def index
-    @messages = Message.all
+    @messages = Message.all.reverse
     @message = Message.new
   end
   def create
