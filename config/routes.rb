@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root :to => "messages#index"
   post "/messages" => "messages#create"
   get "/register" => "users#new"
@@ -7,4 +6,5 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"
   get "/logout" => "sessions#destroy"
+  mount ActionCable.server => '/cable'
 end
